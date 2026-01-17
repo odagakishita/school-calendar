@@ -1,16 +1,17 @@
-/* アニメーションの定義: 下からふわっと浮き上がる */
-@keyframes fadeIn {
-    from { 
-        opacity: 0; 
-        transform: translateY(10px); 
-    }
-    to { 
-        opacity: 1; 
-        transform: translateY(0); 
-    }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* カレンダーのマス目の高さを最低限確保 */
+.calendar-cell {
+    min-height: 80px; /* スマホで見やすい高さ */
 }
 
-/* クラスとして適用 */
-.animate-fade-in {
-    animation: fadeIn 0.3s ease-out;
+/* 投稿タイトルのスタイル（長いと...で省略） */
+.post-chip {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 0.7rem;
+    line-height: 1.2;
 }
